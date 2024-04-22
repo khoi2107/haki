@@ -1,0 +1,33 @@
+local x = game.Players.LocalPlayer.UserId
+local haki = game:GetService("Workspace").UserData["User"..x].Data.HakiLevel.Value
+
+for i = 1,25 do
+
+while wait() do
+local args = {
+    [1] = "On",
+    [2] = haki
+}
+
+workspace.UserData["User"..x].III:FireServer(unpack(args))
+
+wait()
+
+local args = {
+    [1] = "Off",
+    [2] = haki
+}
+
+workspace.UserData["User"..x].III:FireServer(unpack(args))
+
+
+wait()
+
+local args = {
+    [1] = "Off",
+    [2] = haki
+}
+
+workspace.UserData["User"..x].III:FireServer(unpack(args))
+end
+end
